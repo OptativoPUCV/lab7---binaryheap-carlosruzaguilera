@@ -17,3 +17,23 @@ heap.c:36:21: error: cast to pointer from integer of different size [-Werror=int
 cc1: all warnings being treated as errors
 Compilation failed
 6e23545
+Thu 28 Sep 2023 05:13:04 AM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘createHeap’:
+heap.c:36:28: error: implicit declaration of function ‘mlloc’; did you mean ‘malloc’? [-Werror=implicit-function-declaration]
+   36 |     Heap* newHeap = (Heap*)mlloc(sizeof(Heap));
+      |                            ^~~~~
+      |                            malloc
+heap.c:36:21: error: cast to pointer from integer of different size [-Werror=int-to-pointer-cast]
+   36 |     Heap* newHeap = (Heap*)mlloc(sizeof(Heap));
+      |                     ^
+heap.c:39:51: error: ‘heaElem’ undeclared (first use in this function); did you mean ‘heapElem’?
+   39 |     newHeap->heapArray = (heapElem*)malloc(sizeof(heaElem) * newHeap->capac);
+      |                                                   ^~~~~~~
+      |                                                   heapElem
+heap.c:39:51: note: each undeclared identifier is reported only once for each function it appears in
+cc1: all warnings being treated as errors
+Compilation failed
+35dc8bb
