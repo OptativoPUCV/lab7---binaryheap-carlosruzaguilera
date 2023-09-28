@@ -302,3 +302,31 @@ heap.c:35:5: note: previous implicit declaration of ‘heapify_up’ with type �
 cc1: all warnings being treated as errors
 Compilation failed
 e5735dc
+Thu 28 Sep 2023 05:30:30 AM UTC: 
+ heap.c | 23 ++++++++++++++++++++++-
+ 1 file changed, 22 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:35:5: error: implicit declaration of function ‘heapify_up’ [-Werror=implicit-function-declaration]
+   35 |     heapify_up(pq, pq->size - 1);
+      |     ^~~~~~~~~~
+heap.c: In function ‘heap_pop’:
+heap.c:43:5: error: implicit declaration of function ‘heapify_down’ [-Werror=implicit-function-declaration]
+   43 |     heapify_down(pq, 0);
+      |     ^~~~~~~~~~~~
+heap.c: At top level:
+heap.c:56:6: error: conflicting types for ‘heapify_up’; have ‘void(Heap *, int)’ {aka ‘void(struct Heap *, int)’} [-Werror]
+   56 | void heapify_up(Heap* pq, int index) {
+      |      ^~~~~~~~~~
+heap.c:35:5: note: previous implicit declaration of ‘heapify_up’ with type ‘void(Heap *, int)’ {aka ‘void(struct Heap *, int)’}
+   35 |     heapify_up(pq, pq->size - 1);
+      |     ^~~~~~~~~~
+heap.c:70:6: error: conflicting types for ‘heapify_down’; have ‘void(Heap *, int)’ {aka ‘void(struct Heap *, int)’} [-Werror]
+   70 | void heapify_down(Heap* pq, int index) {
+      |      ^~~~~~~~~~~~
+heap.c:43:5: note: previous implicit declaration of ‘heapify_down’ with type ‘void(Heap *, int)’ {aka ‘void(struct Heap *, int)’}
+   43 |     heapify_down(pq, 0);
+      |     ^~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+a18e4d1
