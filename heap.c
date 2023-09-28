@@ -17,6 +17,10 @@ typedef struct Heap{
 } Heap;
 
 
+// Declaraciones de funciones
+void heapify_up(Heap* pq, int index);
+void heapify_down(Heap* pq, int index);
+
 void* heap_top(Heap* pq) {
     if (pq->size == 0) return NULL;
     return pq->heapArray[0].data;

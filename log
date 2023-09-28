@@ -330,3 +330,9 @@ heap.c:43:5: note: previous implicit declaration of ‘heapify_down’ with type
 cc1: all warnings being treated as errors
 Compilation failed
 a18e4d1
+Thu 28 Sep 2023 05:36:05 AM UTC: 
+ heap.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+ tests:  8|0
+total_score: 70/70
+7238ac3
