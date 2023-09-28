@@ -267,3 +267,14 @@ heap.c:61:17: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘h
       |                 heapArray
 Compilation failed
 fa1f1de
+Thu 28 Sep 2023 05:26:57 AM UTC: 
+ heap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heapify_up’:
+heap.c:62:17: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘heapAray’; did you mean ‘heapArray’?
+   62 |             pq->heapAray[parentIndex] = temp;
+      |                 ^~~~~~~~
+      |                 heapArray
+Compilation failed
+778c9e5

@@ -58,8 +58,8 @@ void heapify_up(Heap* pq, int index) {
         int parentIndex = (index - 1) / 2;
         if (pq->heapArray[index].priority > pq->heapArray[parentIndex].priority) {
             heapElem temp = pq->heapArray[index];
-            pq->heapAray[index] = pq->heapArray[parentIndex];
-            pq->heapArray[parentIndex] = temp;
+            pq->heapArray[index] = pq->heapArray[parentIndex];
+            pq->heapAray[parentIndex] = temp;
             index = parentIndex;
         } else {
             break;
