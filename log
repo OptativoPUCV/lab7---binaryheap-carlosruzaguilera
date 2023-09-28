@@ -110,3 +110,23 @@ heap.c:34:9: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘sz
       |         size
 Compilation failed
 9c41c97
+Thu 28 Sep 2023 05:15:57 AM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:33:5: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+   33 |     if (pq->size == 0) return;turn;
+      |     ^~
+heap.c:33:31: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   33 |     if (pq->size == 0) return;turn;
+      |                               ^~~~
+heap.c:33:31: error: ‘turn’ undeclared (first use in this function)
+heap.c:33:31: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:34:9: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘sze’; did you mean ‘size’?
+   34 |     pq->sze--;
+      |         ^~~
+      |         size
+cc1: all warnings being treated as errors
+Compilation failed
+eded524
