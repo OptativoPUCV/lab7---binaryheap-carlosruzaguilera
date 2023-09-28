@@ -62,7 +62,7 @@ void heapify_up(Heap* pq, int index) {
         int parentIndex = (index - 1) / 2;
         if (pq->heapArray[index].priority > pq->heapArray[parentIndex].priority) {
             heapElem temp = pq->heapArray[index];
-            pq->heapAray[index] = pq->heapArray[parentIndex];
+            pq->heapArray[index] = pq->heapArray[parentIndex];
             pq->heapArray[parentIndex] = temp;
             index = parentIndex;
         } else {
@@ -71,23 +71,3 @@ void heapify_up(Heap* pq, int index) {
     }
 }
 
-void heapify_down(Heap* pq, int index) {
-    int largestIndex = index;
-    int leftChildIndex = 2 * index + 1;
-    int rightChildIndex = 2 * index + 2;
-
-    if (leftChildIndex < pq->size && pq->heapArray[leftChildIndex].priority > pq->heapArray[largestIndex].priority) {
-        largestIndex = leftChildIndex;
-    }
-
-    if (rightChildIndex < pq->size && pq->heapArray[rightChildIndex].priority > pq->heapArray[largestIndex].priority) {
-        largestIndex = rightChildIndex;
-    }
-
-    if (largestIndex != index) {
-        heapElem temp = pq->heapArray[index];
-        pq->heapArray[index] = pq->heapArray[largestIndex];
-        pq->heapArray[largestIndex] = temp;
-        heapify_down(pq, largestIndex);
-    }
-}

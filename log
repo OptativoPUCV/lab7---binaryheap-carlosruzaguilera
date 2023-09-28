@@ -347,3 +347,11 @@ heap.c:65:17: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘h
       |                 heapArray
 Compilation failed
 6cc6a66
+Thu 28 Sep 2023 05:37:57 AM UTC: 
+ heap.c | 22 +---------------------
+ 1 file changed, 1 insertion(+), 21 deletions(-)
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: /tmp/ccyuADAJ.o: in function `heap_pop':
+test.c:(.text+0x4a): undefined reference to `heapify_down'
+collect2: error: ld returned 1 exit status
+Compilation failed
+cb6e7cf
