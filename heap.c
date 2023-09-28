@@ -50,3 +50,19 @@ Heap* createHeap() {
     newHeap->heapArray = (heapElem*)malloc(sizeof(heapElem) * newHeap->capac);
     return newHeap;
 }
+
+
+
+void heapify_up(Heap* pq, int index) {
+    while (index > 0) {
+        int parentIndex = (index - 1) / 2;
+        if (pq->heapAray[index].priority > pq->heapArray[parentIndex].priority) {
+            heapElem temp = pq->heapArray[index];
+            pq->heapArray[index] = pq->heapArray[parentIndex];
+            pq->heapArray[parentIndex] = temp;
+            index = parentIndex;
+        } else {
+            break;
+        }
+    }
+}
