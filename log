@@ -195,3 +195,23 @@ Thu 28 Sep 2023 05:18:22 AM UTC:
  tests:  2|2
 total_score: 20/70
 05ee88d
+Thu 28 Sep 2023 05:18:47 AM UTC: 
+ heap.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:32:34: error: ‘daa’ undeclared (first use in this function); did you mean ‘data’?
+   32 |   pq->heapArray[pq->size].data = daa;
+      |                                  ^~~
+      |                                  data
+heap.c:32:34: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:33:40: error: ‘p’ undeclared (first use in this function); did you mean ‘pq’?
+   33 |     pq->heapArray[pq->size].priority = p;
+      |                                        ^
+      |                                        pq
+heap.c: At top level:
+heap.c:38:1: error: expected identifier or ‘(’ before ‘}’ token
+   38 | }
+      | ^
+Compilation failed
+7159c01

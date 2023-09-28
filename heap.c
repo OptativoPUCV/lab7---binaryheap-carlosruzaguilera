@@ -29,6 +29,11 @@ void heap_push(Heap* pq, void* data, int priority){
         pq->capac = pq->capac * 2 + 1;
         pq->heapArray = realloc(pq->heapArray, sizeof(heapElem) * pq->capac);
     }
+  pq->heapArray[pq->size].data = daa;
+    pq->heapArray[pq->size].priority = p;
+    pq->size++;
+    // Aquí debe ajustar el montículo hacia arriba.
+}
   
 }
 
