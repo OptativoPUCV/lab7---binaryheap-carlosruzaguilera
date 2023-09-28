@@ -355,3 +355,15 @@ test.c:(.text+0x4a): undefined reference to `heapify_down'
 collect2: error: ld returned 1 exit status
 Compilation failed
 cb6e7cf
+Thu 28 Sep 2023 05:38:33 AM UTC: 
+ heap.c | 9 ++-------
+ 1 file changed, 2 insertions(+), 7 deletions(-)
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: /tmp/ccNQqfFl.o: in function `test_pop':
+test.c:(.text+0x7e1): undefined reference to `heap_pop'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: test.c:(.text+0x823): undefined reference to `heap_pop'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: test.c:(.text+0x841): undefined reference to `heap_pop'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: test.c:(.text+0x85b): undefined reference to `heap_pop'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: test.c:(.text+0x879): undefined reference to `heap_pop'
+collect2: error: ld returned 1 exit status
+Compilation failed
+3aa4394

@@ -19,7 +19,7 @@ typedef struct Heap{
 
 // Declaraciones de funciones
 void heapify_up(Heap* pq, int index);
-void heapify_down(Heap* pq, int index);
+//void heapify_down(Heap* pq, int index);
 
 void* heap_top(Heap* pq) {
     if (pq->size == 0) return NULL;
@@ -40,12 +40,7 @@ void heap_push(Heap* pq, void* data, int p) {
 }
 
 
-void heap_pop(Heap* pq) {
-    if (pq->size == 0) return;
-    pq->size--;
-    pq->heapArray[0] = pq->heapArray[pq->size];
-    heapify_down(pq, 0);
-}
+
 
 Heap* createHeap() {
     Heap* newHeap = (Heap*)malloc(sizeof(Heap));
