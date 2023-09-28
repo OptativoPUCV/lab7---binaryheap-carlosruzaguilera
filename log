@@ -78,3 +78,14 @@ heap.c:21:24: error: implicit declaration of function ‘retun’ [-Werror=impli
 cc1: all warnings being treated as errors
 Compilation failed
 ab62655
+Thu 28 Sep 2023 05:14:36 AM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_top’:
+heap.c:21:24: error: implicit declaration of function ‘retrun’ [-Werror=implicit-function-declaration]
+   21 |     if (pq->size == 0) retrun NULL;
+      |                        ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+0c0f05f
