@@ -162,3 +162,19 @@ heap.c:30:23: error: assignment to ‘heapElem *’ {aka ‘struct nodo *’} fr
 cc1: all warnings being treated as errors
 Compilation failed
 c853861
+Thu 28 Sep 2023 05:17:52 AM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:30:25: error: implicit declaration of function ‘relloc’; did you mean ‘realloc’? [-Werror=implicit-function-declaration]
+   30 |         pq->heapArray = relloc(pq->heapArray, sizeof(heapElem) * pq->caac);
+      |                         ^~~~~~
+      |                         realloc
+heap.c:30:70: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘caac’; did you mean ‘capac’?
+   30 |         pq->heapArray = relloc(pq->heapArray, sizeof(heapElem) * pq->caac);
+      |                                                                      ^~~~
+      |                                                                      capac
+cc1: all warnings being treated as errors
+Compilation failed
+90b52f4
