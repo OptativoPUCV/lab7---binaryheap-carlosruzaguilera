@@ -130,3 +130,14 @@ heap.c:34:9: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘sz
 cc1: all warnings being treated as errors
 Compilation failed
 eded524
+Thu 28 Sep 2023 05:16:16 AM UTC: 
+ heap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:34:9: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘sizeze’; did you mean ‘size’?
+   34 |     pq->sizeze--;
+      |         ^~~~~~
+      |         size
+Compilation failed
+0ac82da
