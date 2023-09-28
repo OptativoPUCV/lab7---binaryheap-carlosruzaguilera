@@ -95,3 +95,18 @@ Thu 28 Sep 2023 05:14:59 AM UTC:
  tests:  2|2
 total_score: 20/70
 7d65580
+Thu 28 Sep 2023 05:15:40 AM UTC: 
+ heap.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:33:24: error: ‘rturn’ undeclared (first use in this function)
+   33 |     if (pq->size == 0) rturn;
+      |                        ^~~~~
+heap.c:33:24: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:34:9: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘sze’; did you mean ‘size’?
+   34 |     pq->sze--;
+      |         ^~~
+      |         size
+Compilation failed
+9c41c97
