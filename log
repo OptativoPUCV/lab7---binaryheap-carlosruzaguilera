@@ -336,3 +336,14 @@ Thu 28 Sep 2023 05:36:05 AM UTC:
  tests:  8|0
 total_score: 70/70
 7238ac3
+Thu 28 Sep 2023 05:37:23 AM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heapify_up’:
+heap.c:65:17: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘heapAray’; did you mean ‘heapArray’?
+   65 |             pq->heapAray[index] = pq->heapArray[parentIndex];
+      |                 ^~~~~~~~
+      |                 heapArray
+Compilation failed
+6cc6a66
