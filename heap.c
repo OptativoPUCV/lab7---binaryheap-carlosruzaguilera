@@ -32,7 +32,7 @@ void heap_push(Heap* pq, void* data, int p) {
     pq->heapArray[pq->size].data = data;
     pq->heapArray[pq->size].priority = p;
     pq->size++;
-    // Aquí debe ajustar el montículo hacia arriba.
+    heapify_up(pq, pq->size - 1);
 }
 
 

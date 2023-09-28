@@ -284,3 +284,21 @@ Thu 28 Sep 2023 05:27:06 AM UTC:
  tests:  3|2
 total_score: 25/70
 61b58f6
+Thu 28 Sep 2023 05:28:01 AM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:35:5: error: implicit declaration of function ‘heapify_up’ [-Werror=implicit-function-declaration]
+   35 |     heapify_up(pq, pq->size - 1);
+      |     ^~~~~~~~~~
+heap.c: At top level:
+heap.c:56:6: error: conflicting types for ‘heapify_up’; have ‘void(Heap *, int)’ {aka ‘void(struct Heap *, int)’} [-Werror]
+   56 | void heapify_up(Heap* pq, int index) {
+      |      ^~~~~~~~~~
+heap.c:35:5: note: previous implicit declaration of ‘heapify_up’ with type ‘void(Heap *, int)’ {aka ‘void(struct Heap *, int)’}
+   35 |     heapify_up(pq, pq->size - 1);
+      |     ^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+e5735dc
