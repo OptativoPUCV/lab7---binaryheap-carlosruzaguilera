@@ -141,3 +141,9 @@ heap.c:34:9: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘si
       |         size
 Compilation failed
 0ac82da
+Thu 28 Sep 2023 05:16:32 AM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  2|2
+total_score: 20/70
+a376097
