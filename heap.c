@@ -39,7 +39,9 @@ void heap_push(Heap* pq, void* data, int p) {
     heapify_up(pq, pq->size - 1);
 }
 
-
+void heap_pop(Heap* pq) {
+    if (pq->size == 0) return;
+}
 
 
 Heap* createHeap() {
